@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="submit" value="bai 1" onclick="alertMessage()()"><br>
+    <input type="submit" value="bai 2" onclick="bai2(9)"><br>
+    <input type="submit" value="bai 3" onclick="bai3(1,2)"><br>
+    <input type="submit" value="bai 4" onclick="addNumbers()"><br>
+    <input type="submit" value="bai 5" onclick="bai5('Polaris')">
+
+    <script>
+        alertMessage = () => {
+            alert('Xin chao!')
+        }
+
+        bai2 = (number) => {
+            alert(`Gia tri sau khi tang len 1: ${number + 1}`)
+        }
+
+        bai3 = (number1, number2) => {
+            if (number1 > number2) {
+                alert(`${number1} > ${number2}`)
+            }
+            else {
+                sum = number1 + number2;
+                alert(sum)
+            }
+        }
+
+        addNumbers = () => {
+            firtNum = 4;
+            seconNum = 8;
+            result = firtNum + seconNum;
+            alert(result)
+        }
+
+        let stars =  ['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe', 'Regulus'];
+        let constellation = ['Ursa Minor', 'Tarurus, Cygnus', 'Lyra', 'Aquila', 'Ursa Major', 'Leo'];
+        bai5 = (str) => {
+           for (let i = 0; i < stars.length; i++){
+               if (stars[i] == str) {
+                   alert(`Chom sao tuong ung la: ${constellation[i]}`);
+                   break;
+               }
+               if (i == stars.length) {
+                   alert('Khong tim thay ngoi sao ban tim!')
+               }
+           }
+        }
+    </script>
+</body>
+
+</html>
