@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="submit" value="bai 1" onclick="bai1(2)"><br>
+    <input type="submit" value="bai 2" onclick="bai2(10)"><br>
+    <input type="submit" value="bai 3" onclick="bai3(5)"><br>
+    <input type="submit" value="bai 4" onclick="bai4()"><br>
+    <input type="submit" value="bai 5" onclick="bai5()"><br>
+    <input type="submit" value="bai 6" onclick="bai6()"><br>
+    <input type="submit" value="bai 7" onclick="bai7()"><br>
+    <input type="submit" value="bai 8" onclick="bai8()"><br>
+    <input type="submit" value="bai 9" onclick="bai9()">
+
+    <script>
+        bai1 = (number) => {
+            alert(`Binh phuong cua ${number}: ${number ** 2}`)
+        }
+
+        bai2 = (radius) => {
+            alert(`Dien tich hinh tron: S = ${Math.PI * radius ** 2}`);
+            alert(`Chi vi hinh tron: C = ${2 * Math.PI * radius} `)
+        }
+
+        let giaithua;
+        bai3 = (number) => {
+            if (number > 1) {
+                for (let i = 1; i < number; i++) {
+                    giaithua = number * i;
+                    alert(giaithua)
+                }
+            }
+            else if (number == 1) {
+                alert(`Giai thua la ${number}`)
+            }
+            else {
+                alert('khong ton tai giai thua nao!')
+            }
+        }
+
+        // bai4 = () => {
+        // number = Number(prompt('Nhap vao 1 gia tri: '));
+        // return Number.isInteger(number) ? true : false;
+        //     if (Number.isInteger(number)){
+        //         alert(true)
+        //     }
+        //     else {
+        //         alert(false)
+        //     }
+        // }
+        // alert(bai4());
+
+        // bai5 = (number1, number2, number3) => {
+        //     if (number1 < number2 && number1 < number3) {
+        //         return `Gia tri nho nhat la ${number1}`
+        //     }
+        //     else if (number2 < number1 && number1 < number3) {
+        //         return `Gia tri nho nhat la ${number2}`
+        //     }
+        //     else {
+        //         return `Gia tri nho nhat la ${number3}`
+        //     }           
+        // }
+        // alert(bai5(5,6,7))
+
+        // bai6 = (number) => {
+        //     return (number > 0) ? true : false;
+        // }
+        // alert(bai6(-12))
+
+            // bai7 = (number1, number2) => {
+            //     let temp = number1;
+            //     number1 = number2;
+            //     number2 = temp;
+            //     return `number1: ${number1} number2: ${number2}`
+            // }
+            // alert(bai7(1, 10))
+
+            // bai8 = (arr) => {
+            //     return arr.reverse('')
+            // }
+            // alert(bai8([1, 2, 3, 4, 5]))
+
+        bai9 = (arr, str) => {
+            let count=0;
+            for (let i = 0; i < arr.length; i++) {
+                if (arr[i] == str) {    
+                    count++;
+                    return(`So lan xuat hien cua ky tu la: ${count}`);
+                }
+                else {
+                    return -1;
+                }
+            }
+        }
+        alert(bai9(['codegymHue','hello'], ['hello']))
+    </script>
+</body>
+
+</html>
